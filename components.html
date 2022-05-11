@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+
+        body {
+            --u: 0.75px;
+            background-color: #000000;
+            font-family: 'Poppins', sans-serif;
+            padding: calc(50 * var(--u));
+        }
+
+        #componentsGrid {
+            display: grid;
+            gap: calc(35 * var(--u));
+            grid-template-columns: calc(260 * var(--u)) calc(260 * var(--u)) calc(260 * var(--u)) calc(260 * var(--u)) calc(260 * var(--u)) calc(260 * var(--u));
+            grid-template-rows: calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) calc(65 * var(--u)) ;
+        }
+
+        .component {
+            background-color: #1A2028;
+            border-color: #414955;
+            border-radius: calc(28 * var(--u));
+            border-style: solid;
+            border-width: 2px;
+            overflow: hidden;
+            padding-left: calc(35 * var(--u));
+            padding-top: calc(25 * var(--u));
+        }
+
+        .component h2 {
+            color: #FFF;
+            font-size: calc(35 * var(--u));
+            font-weight: 500;
+            margin-bottom: calc(12 * var(--u));
+            margin-top: calc(0 * var(--u));
+        }
+
+        .component h3 {
+            color: #818181;
+            font-size: calc(16 * var(--u));
+            font-weight: 400;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .span-2-rows {
+            grid-row-start: span 2;
+        }
+
+        .span-3-rows {
+            grid-row-start: span 3;
+        }
+
+        .span-4-rows {
+            grid-row-start: span 4;
+        }
+
+        .span-5-rows {
+            grid-row-start: span 5;
+        }
+
+        .span-6-rows {
+            grid-row-start: span 6;
+        }
+
+        .span-7-rows {
+            grid-row-start: span 7;
+        }
+
+        .span-1-column {
+            grid-column-start: span 1;
+        }
+
+        .span-2-columns {
+            grid-column-start: span 2;
+        }
+    </style>
+    
+    <div id="componentsGrid">
+        <div class="component span-4-rows span-2-columns">
+            <h2>Money</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-rows span-2-columns">
+            <h2>Calendar</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-6-rows span-2-columns">
+            <h2>Balance</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-4-rows span-2-columns">
+            <h2>Income</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-rows span-2-columns">
+            <h2>Inbox</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-6-rows span-2-columns">
+            <h2>Income and outcome</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-rows span-1-column">
+            <h2>Day</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-rows span-1-column">
+            <h2>Followers</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-7-rows span-2-columns">
+            <h2>Chat</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-5-rows span-1-column">
+            <h2>John Doe</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-rows  span-1-column">
+            <h2>Dark</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-3-rows span-1-column">
+            <h2>Meeting</h2>
+            <h3>subtitle</h3>
+        </div>
+        <div class="component span-2-columns">
+            <h3>Search</h3>
+        </div>
+    </div>
+</body>
+</html>
