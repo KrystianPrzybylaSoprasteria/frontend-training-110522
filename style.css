@@ -3,7 +3,6 @@
 }
 
 .square {
-  position: relative;
   background-color: #1a2028;
   border-radius: 30px;
   box-sizing: border-box;
