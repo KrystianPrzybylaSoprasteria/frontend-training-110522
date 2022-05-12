@@ -1,0 +1,76 @@
+.box {
+  border-color: #414955;
+  border-radius: 28;
+  border-style: solid;
+  border-width: 2px;
+  overflow: hidden;
+  padding-left: 35;
+  padding-top: 35;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 243px;
+  height: 243px;
+  background: #1A2028;
+  border-radius: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.temperature {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 96px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+}
+
+.uom {
+  position: absolute;
+  top: 80%;
+  left: 10%;
+}
+
+.day {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #818181;
+}
+
+.font_grey {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 22px;
+  color: #818181;
+}
+
+.font_white {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+body {
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
