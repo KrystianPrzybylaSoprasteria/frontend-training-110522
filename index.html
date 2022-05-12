@@ -24,7 +24,7 @@
             <img id="weather-icon" src="img/sun.svg" />
             <span id="degrees">20°</span>
             <p class="punit">
-                <span id="Celcius" class="sunit active-unit" onclick="UnitSwitch('Celcius')">Celcius</span> / <span id="Farenheit" class="sunit" onclick="UnitSwitch('Farenheit')">Farenheit</span>
+                <span id="Celcius" class="sunit active-unit" onclick="UnitSwitch('Celcius')">Celcius</span> / <span id="Fahrenheit" class="sunit" onclick="UnitSwitch('Fahrenheit')">Fahrenheit</span>
             </p>
             
         </div>
@@ -47,15 +47,15 @@
     <script>
         function UnitSwitch(unit){
             celc = Math.floor(Math.random() * 50 - 20);
-            farenheits = celc * 1.8 + 32
+            fahrenheits = celc * 1.8 + 32
             if (unit == "Celcius") {
-                document.querySelector("#Farenheit").classList.remove("active-unit");
+                document.querySelector("#Fahrenheit").classList.remove("active-unit");
                 document.querySelector("#Celcius").classList.add("active-unit");
                 document.querySelector("#degrees").textContent = celc + "°";
             }else{
                 document.querySelector("#Celcius").classList.remove("active-unit");
-                document.querySelector("#Farenheit").classList.add("active-unit");
-                document.querySelector("#degrees").textContent = farenheits.toFixed(1) +"°";
+                document.querySelector("#Fahrenheit").classList.add("active-unit");
+                document.querySelector("#degrees").textContent = fahrenheits.toFixed(1) +"°";
             }
         }
         function SwitchMode(){
