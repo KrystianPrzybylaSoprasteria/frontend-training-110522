@@ -5,38 +5,39 @@ $titleColor: white;
 
 @mixin border-containers {
     /* Border */
-    background-color: #1A2028;
-    border: 1px solid transparent;
-    border-radius: 30px;
     background-clip: padding-box, border-box;
+    background-color: #1A2028;
     background-origin: padding-box, border-box;
+    border-radius: 30px;
+    border: 1px solid transparent;
   }
 
-html,body {
-    margin-top: 0px;
-    color: gray;
+html,
+body {
     background-color: black;
+    color: gray;
     font-family: 'Poppins', sans-serif;
+    margin-top: 0px;
 }
 body {
     background-image: url("img/bg.svg");
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .container {
     display: grid;
-    justify-content: center;  
-    grid-template-columns: repeat(6, $gWUnit);
-    grid-template-rows: repeat(22, $gHUnit); 
     grid-column-gap: $gGap;
     grid-row-gap: $gGap;
+    grid-template-columns: repeat(6, $gWUnit);
+    grid-template-rows: repeat(22, $gHUnit); 
+    justify-content: center;  
     padding-top: 160px;
 }
 
 .light-bg {
     background: 
-    linear-gradient(to right, #657d9c, #657d9c), 
-    linear-gradient(to right, #414955 , #2c323b10); 
+        linear-gradient(to right, #657d9c, #657d9c), 
+        linear-gradient(to right, #414955 , #2c323b10); 
 }
 .dark-bg {
     background: 
@@ -48,42 +49,42 @@ body {
         @include border-containers;
         h1 {
             color: $titleColor;
+            font-size: 36px;
             font-weight: 500;
             margin: 20px;
-            font-size: 36px;
         }
         .day {
+            float: left;
             font-size: 16px;
             font-weight: 400;
             padding: 34px;
-            float: left;
         }
         img {
             float: right;
         }
         #degrees {
-            position: relative;
+            color: $titleColor;
+            display: flex;
             font-size: 64px;
             font-weight: bold;
-            color: $titleColor;
-            text-align: center;
-            width: 100%;
-            padding: 0px;
-            top: -34px;
-            display: flex;
             justify-content: center;
+            padding: 0px;
+            position: relative;
+            text-align: center;
+            top: -34px;
+            width: 100%;
         }
         .active-unit {
             color: $titleColor;
             font-weight: 500;
         }
         .punit {
-            margin: 0px;
-            float: left;
-            width: 100%;
-            text-align: center;
-            position: relative;
             bottom: 10px;
+            float: left;
+            margin: 0px;
+            position: relative;
+            text-align: center;
+            width: 100%;
             span {
                 cursor: pointer;
                 user-select: none;
@@ -93,48 +94,48 @@ body {
             float: left;
             width: 100%;
             img {
-                float: none;
-                top: 50px;
-                position: relative;
-                left: 12px;
+                background: #414955;
                 border-radius: 50%;
                 border: 1px;
-                background: #414955;
+                float: none;
+                left: 12px;
                 padding: 15px;
+                position: relative;
+                top: 50px;
             }
             .theme {
-                text-indent: 82px;
                 position: relative;
+                text-indent: 82px;
                 top: -15px;
             }
             .title {
                 color: $titleColor;
-                font-weight: 500;
                 display: block;
                 font-size: 24px;
+                font-weight: 500;
             }
             .text {
                 display: block;
             }
             .switch-bg {
-                border: 1px solid black;
-                width: 58px;
-                height: 28px;
-                float: right;
-                border-radius: 25px;
                 background: black;
+                border-radius: 25px;
+                border: 1px solid black;
+                float: right;
+                height: 28px;
+                left: -16px;
                 position: relative;
                 top: -42px;
                 transform: translateY(-50%);
-                left: -16px;
+                width: 58px;
             }
             #switch-dot {
-                width: 24px;
-                height: 24px;
                 background-color: #2B3FF2;
                 border-radius: 50%;
-                margin: 2px;
                 cursor: pointer;
+                height: 24px;
+                margin: 2px;
+                width: 24px;
             }
             .switch-left {
                 float: left;
