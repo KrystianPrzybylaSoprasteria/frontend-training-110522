@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">.
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <div class="dark-bg item-a"><h1>Balance</h1></div>
+        <div class="dark-bg item-b"></div>
+        <div class="dark-bg item-c"></div>
+        <div class="dark-bg item-d"></div>
+        <div class="dark-bg item-e"></div>
+        <div class="dark-bg item-f"></div>
+        <div class="dark-bg item-g">
+            <span class="day">Day</span>
+            <img id="weather-icon" src="img/sun.svg" />
+            <span id="degrees">20°</span>
+            <p class="punit">
+                <span id="Celcius" class="sunit active-unit" onclick="UnitSwitch('Celcius')">Celcius</span> / <span id="Farenheit" class="sunit" onclick="UnitSwitch('Farenheit')">Farenheit</span>
+            </p>
+            
+        </div>
+        <div class="dark-bg item-h"></div>
+        <div class="dark-bg item-i"><h1>Chat</h1></div>
+        <div class="dark-bg item-j"></div>
+        <div class="dark-bg item-k"></div>
+        <div class="dark-bg item-l">
+            <span class="moon-circle">
+                <img src="img/moon.svg" />
+                <span class="theme title">Dark</span>
+                <span class="theme text">Theme</span>
+                <span class="switch-bg" >
+                    <span id="switch-dot" class="switch-left" onclick="SwitchMode()"></span>
+                </span>
+            </span>
+        </div>
+        <div class="dark-bg item-m"></div>
+    </div>
+    <script>
+        function UnitSwitch(unit){
+            celc = Math.floor(Math.random() * 50 - 20);
+            farenheits = celc * 1.8 + 32
+            if (unit == "Celcius") {
+                document.querySelector("#Farenheit").classList.remove("active-unit");
+                document.querySelector("#Celcius").classList.add("active-unit");
+                document.querySelector("#degrees").textContent = celc + "°";
+            }else{
+                document.querySelector("#Celcius").classList.remove("active-unit");
+                document.querySelector("#Farenheit").classList.add("active-unit");
+                document.querySelector("#degrees").textContent = farenheits.toFixed(1) +"°";
+            }
+        }
+        function SwitchMode(){
+            if (document.querySelector("#switch-dot").classList.contains("switch-left")){
+                document.querySelector("#switch-dot").classList.remove("switch-left");
+                document.querySelector("#switch-dot").classList.add("switch-right");
+                document.querySelectorAll(".dark-bg").classList.add("light-bg");
+                document.querySelectorAll(".dark-bg").classList.remove("dark-bg");
+            }else{
+                document.querySelector("#switch-dot").classList.remove("switch-right");
+                document.querySelector("#switch-dot").classList.add("switch-left");
+                document.querySelectorAll(".light-bg").classList.add("dark-bg");
+                document.querySelectorAll(".light-bg").classList.remove("light-bg");
+            }
+        }
+    </script>
+</body>
+</html>
