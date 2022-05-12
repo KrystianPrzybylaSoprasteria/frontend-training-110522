@@ -1,0 +1,68 @@
+div.widget #temp-unit, div.widget #weather {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+div.widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 240px;
+  background-color: #1A2028;
+  border-color: #414955;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+div.widget #weather {
+  align-items: center;
+  color: #818181;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 188px;
+}
+div.widget #weather .image {
+  margin-top: 6px;
+  width: 50px;
+  height: 50px;
+  color: #FFD84F;
+}
+div.widget #temp span {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 96px;
+  color: #FFFFFF;
+}
+div.widget #temp-unit {
+  color: #818181;
+  line-height: 56px;
+  width: 188px;
+}
+div.widget #temp-unit .btn {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: #818181;
+  padding: 0;
+}
+div.widget #temp-unit .active {
+  color: #FFFFFF;
+}
+
+div.widget:hover {
+  transform: scale(1.05);
+}
+
+/*# sourceMappingURL=style.css.map */
