@@ -35,7 +35,7 @@
         <div class="dark-bg item-l">
             <span class="moon-circle">
                 <img src="img/moon.svg" />
-                <span class="theme title">Dark</span>
+                <span id="theme-title" class="theme title">Dark</span>
                 <span class="theme text">Theme</span>
                 <span class="switch-bg" >
                     <span id="switch-dot" class="switch-left" onclick="SwitchMode()"></span>
@@ -63,6 +63,7 @@
                 document.querySelector("#switch-dot").classList.remove("switch-left");
                 document.querySelector("#switch-dot").classList.add("switch-right");
                 document.querySelector("body").style.backgroundColor = "#c6dfff";
+                document.querySelector("#theme-title").textContent = "Light";
                 var elements = document.getElementsByClassName("dark-bg");
                 for(var i = elements.length - 1; i >= 0; --i)
                 {
@@ -73,6 +74,7 @@
                 document.querySelector("#switch-dot").classList.remove("switch-right");
                 document.querySelector("#switch-dot").classList.add("switch-left");
                 document.querySelector("body").style.backgroundColor = "";
+                document.querySelector("#theme-title").textContent = "Dark";
                 var elements = document.getElementsByClassName("light-bg");
                 for(var i = elements.length - 1; i >= 0; --i)
                 {
