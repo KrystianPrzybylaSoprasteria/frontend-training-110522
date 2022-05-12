@@ -1,0 +1,74 @@
+@mixin my-font($color, $weight) {
+    color: $color;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: $weight;
+}
+
+.body {
+    background-color: #000000;
+}
+
+.square {
+    background-color: #1a2028;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 243px;
+    height: 243px;
+    border-color: #818181;
+    border-width: 2px;
+    border-style: solid;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+}
+
+.temperature {
+    @include my-font(white, 600);
+    font-size: 64px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-day {
+    @include my-font(#818181, 300);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+}
+
+.temperature-unit {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    align-self: flex-end;
+}
+
+.text {
+    @include my-font(#818181, 300);
+}
+
+.text-active {
+    @include my-font(#FFFFFF, 400);
+}
+
+.image {
+    display: flex;
+    justify-content: flex-end;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    filter: drop-shadow(0px 0px 25px rgba(255, 216, 79, 0.24));
+}
+
+img {
+    margin-right: -5px;
+    margin-top: -5px;
+}
